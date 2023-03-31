@@ -283,6 +283,15 @@ Public Class Main
 
         controlloCopiaTemi = False
 
+        ' nome script
+
+        If txtTabCopiaTemiPathToScript.Text = "" Then
+            MsgBox("Script non selezionato", vbCritical)
+            txtTabCopiaTemiPathToScript.Focus()
+            controlloCopiaTemi = False
+            Exit Function
+        End If
+
         ' tema fine non può essere minore di tema inizio
 
         If NumericUpDownTemiSvoltiFine.Value < NumericUpDownTemiSvoltiInizio.Value Then
