@@ -42,6 +42,17 @@ Public Class Main
 
         ' imposta il path allo script
 
+        NumericUpDownTemiSvoltiInizio.Minimum = 1
+        NumericUpDownTemiSvoltiInizio.Maximum = 90
+
+        NumericUpDownTemiSvoltiFine.Maximum = 1
+        NumericUpDownTemiSvoltiFine.Maximum = 90
+
+        ' solo per debug
+        NumericUpDownTemiSvoltiInizio.Value = 1
+        NumericUpDownTemiSvoltiFine.Value = 5
+
+
         txtTabCopiaTemiPathToScript.Text = "I:\amministrazione\gestione utenti\nuovi script utenti con share\CopiaTemi.cmd"
 
     End Sub
@@ -241,7 +252,7 @@ Public Class Main
 
         ' controllo
 
-        If controllo() = False Then Exit Sub
+        If controlloCopiaTemi() = False Then Exit Sub
 
         ' Chiede conferma
 
@@ -255,7 +266,7 @@ Public Class Main
         ' inizializza la stringa del comando
         sCmd = txtTabCopiaTemiPathToScript.Text + " " + strInizio + " " + strFine
 
-        Debug.WriteLine(sCmd)
+        Console.WriteLine(sCmd)
 
         ' run
         'Shell(sCmd, AppWinStyle.NormalFocus)
@@ -284,23 +295,24 @@ Public Class Main
 
     End Function
 
-    Private Function controllo() As Boolean
+    Private Function controlloCopiaTemi() As Boolean
 
         ' fallito
 
-        controllo = False
+        controlloCopiaTemi = False
 
         ' tema fine non può essere minore di tema inizio
 
         If NumericUpDownTemiSvoltiFine.Value < NumericUpDownTemiSvoltiInizio.Value Then
             MsgBox("Il numero dell'ultimo tema non può essere minore del primo!", vbCritical)
             NumericUpDownTemiSvoltiFine.Focus()
-            controllo = False
+            controlloCopiaTemi = False
             Exit Function
         End If
+
         ' ok
 
-        controllo = True
+        controlloCopiaTemi = True
 
     End Function
 
