@@ -1,0 +1,4 @@
+﻿Compilazione avviata...
+1>------ Inizio compilazione: Progetto: GestioneUtentiSegreteriaITETGFloriani, Configurazione: Release x86 ------
+1>C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets(4230,5): error MSB3482: errore durante la firma: Non è stato possibile firmare bin\Release\app.publish\GestioneUtentiSegreteria.exe. SignTool Error: No certificates were found that met all the given criteria.
+========== Compilazione: 0 completate, 1 non riuscite, 0 aggiornate, 0 ignorate ==========

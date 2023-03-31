@@ -1,0 +1,13 @@
+\\srvfloriani2\utenti\tecnici\profili\paolo.berlanda\documents\visual studio 2010\Projects\GestioneUtentiITETGFloriani\GestioneUtentiITETGFloriani\obj\x86\Debug\WindowsApplication1.Main.resources
+\\srvfloriani2\utenti\tecnici\profili\paolo.berlanda\documents\visual studio 2010\Projects\GestioneUtentiITETGFloriani\GestioneUtentiITETGFloriani\obj\x86\Debug\WindowsApplication1.Resources.resources
+\\srvfloriani2\utenti\tecnici\profili\paolo.berlanda\documents\visual studio 2010\Projects\GestioneUtentiITETGFloriani\GestioneUtentiITETGFloriani\obj\x86\Debug\GestioneUtentiITETGFloriani.vbproj.GenerateResource.Cache
+\\srvfloriani2\utenti\tecnici\PROFILI\paolo.berlanda\Documents\Visual Studio 2010\Projects\GestioneUtentiITETGFloriani\GestioneUtentiITETGFloriani\bin\Debug\GestioneUtenti.exe.manifest
+\\srvfloriani2\utenti\tecnici\PROFILI\paolo.berlanda\Documents\Visual Studio 2010\Projects\GestioneUtentiITETGFloriani\GestioneUtentiITETGFloriani\bin\Debug\GestioneUtenti.application
+\\srvfloriani2\utenti\tecnici\PROFILI\paolo.berlanda\Documents\Visual Studio 2010\Projects\GestioneUtentiITETGFloriani\GestioneUtentiITETGFloriani\bin\Debug\GestioneUtenti.exe
+\\srvfloriani2\utenti\tecnici\PROFILI\paolo.berlanda\Documents\Visual Studio 2010\Projects\GestioneUtentiITETGFloriani\GestioneUtentiITETGFloriani\bin\Debug\GestioneUtenti.pdb
+\\srvfloriani2\utenti\tecnici\PROFILI\paolo.berlanda\Documents\Visual Studio 2010\Projects\GestioneUtentiITETGFloriani\GestioneUtentiITETGFloriani\bin\Debug\GestioneUtenti.xml
+\\srvfloriani2\utenti\tecnici\PROFILI\paolo.berlanda\Documents\Visual Studio 2010\Projects\GestioneUtentiITETGFloriani\GestioneUtentiITETGFloriani\obj\x86\Debug\GestioneUtenti.exe.manifest
+\\srvfloriani2\utenti\tecnici\PROFILI\paolo.berlanda\Documents\Visual Studio 2010\Projects\GestioneUtentiITETGFloriani\GestioneUtentiITETGFloriani\obj\x86\Debug\GestioneUtenti.application
+\\srvfloriani2\utenti\tecnici\PROFILI\paolo.berlanda\Documents\Visual Studio 2010\Projects\GestioneUtentiITETGFloriani\GestioneUtentiITETGFloriani\obj\x86\Debug\GestioneUtenti.exe
+\\srvfloriani2\utenti\tecnici\PROFILI\paolo.berlanda\Documents\Visual Studio 2010\Projects\GestioneUtentiITETGFloriani\GestioneUtentiITETGFloriani\obj\x86\Debug\GestioneUtenti.xml
+\\srvfloriani2\utenti\tecnici\PROFILI\paolo.berlanda\Documents\Visual Studio 2010\Projects\GestioneUtentiITETGFloriani\GestioneUtentiITETGFloriani\obj\x86\Debug\GestioneUtenti.pdb

@@ -1,0 +1,37 @@
+\\srvfloriani2\utenti\tecnici\profili\paolo.berlanda\documents\visual studio 2010\Projects\GestioneUtentiITETGFloriani\GestioneUtentiITETGFloriani\obj\x86\Release\WindowsApplication1.Main.resources
+\\srvfloriani2\utenti\tecnici\profili\paolo.berlanda\documents\visual studio 2010\Projects\GestioneUtentiITETGFloriani\GestioneUtentiITETGFloriani\obj\x86\Release\WindowsApplication1.Resources.resources
+\\srvfloriani2\utenti\tecnici\profili\paolo.berlanda\documents\visual studio 2010\Projects\GestioneUtentiITETGFloriani\GestioneUtentiITETGFloriani\obj\x86\Release\GestioneUtentiITETGFloriani.vbproj.GenerateResource.Cache
+\\srvfloriani2\utenti\tecnici\PROFILI\paolo.berlanda\Documents\Visual Studio 2010\Projects\GestioneUtentiITETGFloriani\GestioneUtentiITETGFloriani\bin\Release\GestioneUtenti.exe.manifest
+\\srvfloriani2\utenti\tecnici\PROFILI\paolo.berlanda\Documents\Visual Studio 2010\Projects\GestioneUtentiITETGFloriani\GestioneUtentiITETGFloriani\bin\Release\GestioneUtenti.application
+\\srvfloriani2\utenti\tecnici\PROFILI\paolo.berlanda\Documents\Visual Studio 2010\Projects\GestioneUtentiITETGFloriani\GestioneUtentiITETGFloriani\bin\Release\GestioneUtenti.exe
+\\srvfloriani2\utenti\tecnici\PROFILI\paolo.berlanda\Documents\Visual Studio 2010\Projects\GestioneUtentiITETGFloriani\GestioneUtentiITETGFloriani\bin\Release\GestioneUtenti.pdb
+\\srvfloriani2\utenti\tecnici\PROFILI\paolo.berlanda\Documents\Visual Studio 2010\Projects\GestioneUtentiITETGFloriani\GestioneUtentiITETGFloriani\bin\Release\GestioneUtenti.xml
+\\srvfloriani2\utenti\tecnici\PROFILI\paolo.berlanda\Documents\Visual Studio 2010\Projects\GestioneUtentiITETGFloriani\GestioneUtentiITETGFloriani\obj\x86\Release\GestioneUtenti.exe.manifest
+\\srvfloriani2\utenti\tecnici\PROFILI\paolo.berlanda\Documents\Visual Studio 2010\Projects\GestioneUtentiITETGFloriani\GestioneUtentiITETGFloriani\obj\x86\Release\GestioneUtenti.application
+\\srvfloriani2\utenti\tecnici\PROFILI\paolo.berlanda\Documents\Visual Studio 2010\Projects\GestioneUtentiITETGFloriani\GestioneUtentiITETGFloriani\obj\x86\Release\GestioneUtenti.exe
+\\srvfloriani2\utenti\tecnici\PROFILI\paolo.berlanda\Documents\Visual Studio 2010\Projects\GestioneUtentiITETGFloriani\GestioneUtentiITETGFloriani\obj\x86\Release\GestioneUtenti.xml
+\\srvfloriani2\utenti\tecnici\PROFILI\paolo.berlanda\Documents\Visual Studio 2010\Projects\GestioneUtentiITETGFloriani\GestioneUtentiITETGFloriani\obj\x86\Release\GestioneUtenti.pdb
+\\srvfloriani2\utenti\tecnici\PROFILI\paolo.berlanda\Documents\Visual Studio 2010\Projects\GestioneUtentiITETGFloriani\GestioneUtentiITETGFloriani\obj\x86\Release\GestioneUtentiITETGFloriani.vbprojAssemblyReference.cache
+\\srvfloriani2\utenti\tecnici\PROFILI\paolo.berlanda\Documents\Visual Studio 2010\Projects\GestioneUtentiITETGFloriani\GestioneUtentiITETGFloriani\obj\x86\Release\GestioneUtentiITETGFloriani.vbproj.CoreCompileInputs.cache
+\\srvfloriani2\redirTecnici$\paolo.berlanda\My Documents\Visual Studio 2010\Projects\GestioneUtentiITETGFloriani\GestioneUtentiITETGFloriani\obj\x86\Release\WindowsApplication1.Main.resources
+\\srvfloriani2\redirTecnici$\paolo.berlanda\My Documents\Visual Studio 2010\Projects\GestioneUtentiITETGFloriani\GestioneUtentiITETGFloriani\obj\x86\Release\WindowsApplication1.Resources.resources
+\\srvfloriani2\redirTecnici$\paolo.berlanda\My Documents\Visual Studio 2010\Projects\GestioneUtentiITETGFloriani\GestioneUtentiITETGFloriani\obj\x86\Release\GestioneUtentiITETGFloriani.vbproj.GenerateResource.cache
+\\srvfloriani2\redirTecnici$\paolo.berlanda\My Documents\Visual Studio 2010\Projects\GestioneUtentiITETGFloriani\GestioneUtentiITETGFloriani\obj\x86\Release\GestioneUtentiITETGFloriani.vbproj.CoreCompileInputs.cache
+\\srvfloriani2\redirTecnici$\paolo.berlanda\My Documents\Visual Studio 2010\Projects\GestioneUtentiITETGFloriani\GestioneUtentiITETGFloriani\obj\x86\Release\GestioneUtenti.exe
+\\srvfloriani2\redirTecnici$\paolo.berlanda\My Documents\Visual Studio 2010\Projects\GestioneUtentiITETGFloriani\GestioneUtentiITETGFloriani\obj\x86\Release\GestioneUtenti.xml
+\\srvfloriani2\redirTecnici$\paolo.berlanda\My Documents\Visual Studio 2010\Projects\GestioneUtentiITETGFloriani\GestioneUtentiITETGFloriani\obj\x86\Release\GestioneUtenti.pdb
+\\srvfloriani2\redirTecnici$\paolo.berlanda\My Documents\Visual Studio 2010\Projects\GestioneUtentiITETGFloriani\GestioneUtentiITETGFloriani\bin\Release\GestioneUtenti.exe
+\\srvfloriani2\redirTecnici$\paolo.berlanda\My Documents\Visual Studio 2010\Projects\GestioneUtentiITETGFloriani\GestioneUtentiITETGFloriani\bin\Release\GestioneUtenti.pdb
+\\srvfloriani2\redirTecnici$\paolo.berlanda\My Documents\Visual Studio 2010\Projects\GestioneUtentiITETGFloriani\GestioneUtentiITETGFloriani\bin\Release\GestioneUtenti.xml
+\\srvfloriani2\redirTecnici$\paolo.berlanda\My Documents\Visual Studio 2010\Projects\GestioneUtentiITETGFloriani\GestioneUtentiITETGFloriani\obj\x86\Release\GestioneUtentiITETGFloriani.vbprojAssemblyReference.cache
+I:\dev\GestioneUtentiITETGFloriani\GestioneUtentiITETGFloriani\obj\x86\Release\GestioneUtentiITETGFloriani.vbprojAssemblyReference.cache
+I:\dev\GestioneUtentiITETGFloriani\GestioneUtentiITETGFloriani\obj\x86\Release\WindowsApplication1.Main.resources
+I:\dev\GestioneUtentiITETGFloriani\GestioneUtentiITETGFloriani\obj\x86\Release\WindowsApplication1.Resources.resources
+I:\dev\GestioneUtentiITETGFloriani\GestioneUtentiITETGFloriani\obj\x86\Release\GestioneUtentiITETGFloriani.vbproj.GenerateResource.cache
+I:\dev\GestioneUtentiITETGFloriani\GestioneUtentiITETGFloriani\obj\x86\Release\GestioneUtentiITETGFloriani.vbproj.CoreCompileInputs.cache
+I:\dev\GestioneUtentiITETGFloriani\GestioneUtentiITETGFloriani\bin\Release\GestioneUtentiSegreteria.exe
+I:\dev\GestioneUtentiITETGFloriani\GestioneUtentiITETGFloriani\bin\Release\GestioneUtentiSegreteria.pdb
+I:\dev\GestioneUtentiITETGFloriani\GestioneUtentiITETGFloriani\bin\Release\GestioneUtentiSegreteria.xml
+I:\dev\GestioneUtentiITETGFloriani\GestioneUtentiITETGFloriani\obj\x86\Release\GestioneUtentiSegreteria.exe
+I:\dev\GestioneUtentiITETGFloriani\GestioneUtentiITETGFloriani\obj\x86\Release\GestioneUtentiSegreteria.xml
+I:\dev\GestioneUtentiITETGFloriani\GestioneUtentiITETGFloriani\obj\x86\Release\GestioneUtentiSegreteria.pdb
