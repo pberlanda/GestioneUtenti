@@ -39,13 +39,9 @@ Partial Class Main
         Me.tab2LabelNomeUtente = New System.Windows.Forms.Label()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.btnCopiaTemiSelezionaScript = New System.Windows.Forms.Button()
-        Me.txtCopiaTemiPathToScript = New System.Windows.Forms.TextBox()
+        Me.txtTabCopiaTemiPathToScript = New System.Windows.Forms.TextBox()
         Me.lblCopiaTemiScript = New System.Windows.Forms.Label()
         Me.NumericUpDownTemiSvoltiFine = New System.Windows.Forms.NumericUpDown()
-        Me.btnSelezionaCartella = New System.Windows.Forms.Button()
-        Me.ProgressBar = New System.Windows.Forms.ProgressBar()
-        Me.TextBoxDestinazione = New System.Windows.Forms.TextBox()
-        Me.LabelDestinazione = New System.Windows.Forms.Label()
         Me.btnCopiaTemi = New System.Windows.Forms.Button()
         Me.NumericUpDownTemiSvoltiInizio = New System.Windows.Forms.NumericUpDown()
         Me.LabelTemi = New System.Windows.Forms.Label()
@@ -203,13 +199,9 @@ Partial Class Main
         'TabPage3
         '
         Me.TabPage3.Controls.Add(Me.btnCopiaTemiSelezionaScript)
-        Me.TabPage3.Controls.Add(Me.txtCopiaTemiPathToScript)
+        Me.TabPage3.Controls.Add(Me.txtTabCopiaTemiPathToScript)
         Me.TabPage3.Controls.Add(Me.lblCopiaTemiScript)
         Me.TabPage3.Controls.Add(Me.NumericUpDownTemiSvoltiFine)
-        Me.TabPage3.Controls.Add(Me.btnSelezionaCartella)
-        Me.TabPage3.Controls.Add(Me.ProgressBar)
-        Me.TabPage3.Controls.Add(Me.TextBoxDestinazione)
-        Me.TabPage3.Controls.Add(Me.LabelDestinazione)
         Me.TabPage3.Controls.Add(Me.btnCopiaTemi)
         Me.TabPage3.Controls.Add(Me.NumericUpDownTemiSvoltiInizio)
         Me.TabPage3.Controls.Add(Me.LabelTemi)
@@ -233,10 +225,10 @@ Partial Class Main
         '
         'txtCopiaTemiPathToScript
         '
-        Me.txtCopiaTemiPathToScript.Location = New System.Drawing.Point(139, 50)
-        Me.txtCopiaTemiPathToScript.Name = "txtCopiaTemiPathToScript"
-        Me.txtCopiaTemiPathToScript.Size = New System.Drawing.Size(406, 20)
-        Me.txtCopiaTemiPathToScript.TabIndex = 35
+        Me.txtTabCopiaTemiPathToScript.Location = New System.Drawing.Point(139, 50)
+        Me.txtTabCopiaTemiPathToScript.Name = "txtCopiaTemiPathToScript"
+        Me.txtTabCopiaTemiPathToScript.Size = New System.Drawing.Size(406, 20)
+        Me.txtTabCopiaTemiPathToScript.TabIndex = 35
         '
         'lblCopiaTemiScript
         '
@@ -254,42 +246,9 @@ Partial Class Main
         Me.NumericUpDownTemiSvoltiFine.Size = New System.Drawing.Size(40, 20)
         Me.NumericUpDownTemiSvoltiFine.TabIndex = 26
         '
-        'btnSelezionaCartella
-        '
-        Me.btnSelezionaCartella.Location = New System.Drawing.Point(550, 94)
-        Me.btnSelezionaCartella.Name = "btnSelezionaCartella"
-        Me.btnSelezionaCartella.Size = New System.Drawing.Size(24, 23)
-        Me.btnSelezionaCartella.TabIndex = 33
-        Me.btnSelezionaCartella.Text = "..."
-        Me.btnSelezionaCartella.UseVisualStyleBackColor = True
-        '
-        'ProgressBar
-        '
-        Me.ProgressBar.Location = New System.Drawing.Point(20, 139)
-        Me.ProgressBar.Name = "ProgressBar"
-        Me.ProgressBar.Size = New System.Drawing.Size(287, 23)
-        Me.ProgressBar.TabIndex = 32
-        '
-        'TextBoxDestinazione
-        '
-        Me.TextBoxDestinazione.Location = New System.Drawing.Point(137, 96)
-        Me.TextBoxDestinazione.Name = "TextBoxDestinazione"
-        Me.TextBoxDestinazione.Size = New System.Drawing.Size(409, 20)
-        Me.TextBoxDestinazione.TabIndex = 27
-        Me.TextBoxDestinazione.Text = "O:\"
-        '
-        'LabelDestinazione
-        '
-        Me.LabelDestinazione.AutoSize = True
-        Me.LabelDestinazione.Location = New System.Drawing.Point(17, 99)
-        Me.LabelDestinazione.Name = "LabelDestinazione"
-        Me.LabelDestinazione.Size = New System.Drawing.Size(103, 13)
-        Me.LabelDestinazione.TabIndex = 30
-        Me.LabelDestinazione.Text = "Dove salvaere i temi"
-        '
         'btnCopiaTemi
         '
-        Me.btnCopiaTemi.Location = New System.Drawing.Point(321, 139)
+        Me.btnCopiaTemi.Location = New System.Drawing.Point(691, 153)
         Me.btnCopiaTemi.Name = "btnCopiaTemi"
         Me.btnCopiaTemi.Size = New System.Drawing.Size(75, 23)
         Me.btnCopiaTemi.TabIndex = 29
@@ -314,15 +273,15 @@ Partial Class Main
         '
         'tab3welcome
         '
-        Me.tab3welcome.Location = New System.Drawing.Point(592, 37)
+        Me.tab3welcome.Location = New System.Drawing.Point(136, 88)
         Me.tab3welcome.Name = "tab3welcome"
-        Me.tab3welcome.Size = New System.Drawing.Size(166, 98)
+        Me.tab3welcome.Size = New System.Drawing.Size(438, 44)
         Me.tab3welcome.TabIndex = 15
         Me.tab3welcome.Text = "welcome msg"
         '
         'btnEsci
         '
-        Me.btnEsci.Location = New System.Drawing.Point(599, 216)
+        Me.btnEsci.Location = New System.Drawing.Point(697, 216)
         Me.btnEsci.Name = "btnEsci"
         Me.btnEsci.Size = New System.Drawing.Size(75, 23)
         Me.btnEsci.TabIndex = 11
@@ -368,15 +327,11 @@ Partial Class Main
     Friend WithEvents Tab2ButtonEsegui As Button
     Friend WithEvents TabPage3 As TabPage
     Friend WithEvents NumericUpDownTemiSvoltiFine As NumericUpDown
-    Friend WithEvents btnSelezionaCartella As Button
-    Friend WithEvents ProgressBar As ProgressBar
-    Friend WithEvents TextBoxDestinazione As TextBox
-    Friend WithEvents LabelDestinazione As Label
     Friend WithEvents btnCopiaTemi As Button
     Friend WithEvents NumericUpDownTemiSvoltiInizio As NumericUpDown
     Friend WithEvents LabelTemi As Label
     Friend WithEvents tab3welcome As Label
     Friend WithEvents btnCopiaTemiSelezionaScript As Button
-    Friend WithEvents txtCopiaTemiPathToScript As TextBox
+    Friend WithEvents txtTabCopiaTemiPathToScript As TextBox
     Friend WithEvents lblCopiaTemiScript As Label
 End Class

@@ -40,6 +40,10 @@ Public Class Main
 
         tab3welcome.Text = "Raccoglie file cartelli dalla home directory degli utenti tema e li salva nel percorso specificato"
 
+        ' imposta il path allo script
+
+        txtTabCopiaTemiPathToScript.Text = "I:\amministrazione\gestione utenti\nuovi script utenti con share\CopiaTemi.cmd"
+
     End Sub
 
     Private Sub btnEsci_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEsci.Click
@@ -232,7 +236,6 @@ Public Class Main
     End Sub
 
     Private Sub btnCopiaTemi_Click(sender As Object, e As EventArgs) Handles btnCopiaTemi.Click
-        Dim k As Decimal
 
         ' controllo
 
@@ -240,70 +243,13 @@ Public Class Main
 
         ' Chiede conferma
 
-        If MsgBox("Sei sicuro di voler copiare tutti i temi nella cartella " + TextBoxDestinazione.Text + "?", vbYesNo) = vbNo Then Exit Sub
-
-        ' progress bar
-
-        ProgressBar.Minimum = NumericUpDownTemiSvoltiInizio.Value
-        ProgressBar.Maximum = NumericUpDownTemiSvoltiFine.Value
-
-        ProgressBar.Visible = True
-
-        ' copia i temi richiesti
-
-        For k = NumericUpDownTemiSvoltiInizio.Value To NumericUpDownTemiSvoltiFine.Value
-
-            ' aggiorna la progress bar
-
-            ProgressBar.Increment(CInt(k))
-
-            ' copia il tema
-
-            If copiaTema(k) = False Then
-                MsgBox("Errore!")
-                Exit Sub
-            End If
-
-        Next
-
-        ' Nasconde la progress bar
-
-        ProgressBar.Hide()
+        If MsgBox("Sei sicuro di voler copiare tutti i temi nella cartella ?", vbYesNo) = vbNo Then Exit Sub
 
         ' Ok
 
         MsgBox("Copia dei temi completata!", vbInformation)
 
     End Sub
-
-    Private Function copiaTema(ByVal numeroTema As Decimal) As Boolean
-        Dim numeroTemaStringa As String
-        Dim sourcePath As String
-        Dim XCopyString As String
-
-        ' copia fallita
-
-        copiaTema = False
-
-        ' converti in stringa il numero tema
-
-        numeroTemaStringa = convertiNumeroTema(numeroTema)
-
-        ' compone la sringa del percorso di origine del tema
-
-        sourcePath = componePercorsoOrigine(numeroTemaStringa)
-
-        ' copia il tema con XCOPY
-
-        XCopyString = "cmd.exe /C xcopy.exe " + sourcePath + "\*.* " + TextBoxDestinazione.Text + "tema" + numeroTemaStringa + " /E /I"
-
-        Shell(XCopyString, AppWinStyle.Hide)
-
-        ' Ok
-
-        copiaTema = True
-
-    End Function
 
     Private Function convertiNumeroTema(ByVal numeroTema As Decimal) As String
 
@@ -323,14 +269,6 @@ Public Class Main
 
     End Function
 
-    Private Sub btnSelezionaCartella_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSelezionaCartella.Click
-        Dim folder As New FolderBrowserDialog
-
-        If folder.ShowDialog = Windows.Forms.DialogResult.OK Then
-            TextBoxDestinazione.Text = folder.SelectedPath
-        End If
-
-    End Sub
     Private Function controllo() As Boolean
 
         ' fallito
@@ -345,11 +283,6 @@ Public Class Main
             controllo = False
             Exit Function
         End If
-
-        ' controlla l'ultimo carattere. se manca \ la aggiunge
-
-        If GetChar(TextBoxDestinazione.Text, Len(TextBoxDestinazione.Text)) <> "\" Then TextBoxDestinazione.Text = TextBoxDestinazione.Text + "\"
-
         ' ok
 
         controllo = True
@@ -373,7 +306,7 @@ Public Class Main
             strFileName = fd.FileName
         End If
 
-        txtCopiaTemiPathToScript.Text = strFileName
+        txtTabCopiaTemiPathToScript.Text = strFileName
 
     End Sub
 
