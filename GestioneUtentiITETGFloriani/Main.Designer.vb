@@ -37,20 +37,37 @@ Partial Class Main
         Me.tab2welcome = New System.Windows.Forms.Label()
         Me.tab2TextBoxNomeUente = New System.Windows.Forms.TextBox()
         Me.tab2LabelNomeUtente = New System.Windows.Forms.Label()
+        Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.btnCopiaTemiSelezionaScript = New System.Windows.Forms.Button()
+        Me.txtCopiaTemiPathToScript = New System.Windows.Forms.TextBox()
+        Me.lblCopiaTemiScript = New System.Windows.Forms.Label()
+        Me.NumericUpDownTemiSvoltiFine = New System.Windows.Forms.NumericUpDown()
+        Me.btnSelezionaCartella = New System.Windows.Forms.Button()
+        Me.ProgressBar = New System.Windows.Forms.ProgressBar()
+        Me.TextBoxDestinazione = New System.Windows.Forms.TextBox()
+        Me.LabelDestinazione = New System.Windows.Forms.Label()
+        Me.btnCopiaTemi = New System.Windows.Forms.Button()
+        Me.NumericUpDownTemiSvoltiInizio = New System.Windows.Forms.NumericUpDown()
+        Me.LabelTemi = New System.Windows.Forms.Label()
+        Me.tab3welcome = New System.Windows.Forms.Label()
         Me.btnEsci = New System.Windows.Forms.Button()
         Me.TabMain.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
+        Me.TabPage3.SuspendLayout()
+        CType(Me.NumericUpDownTemiSvoltiFine, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NumericUpDownTemiSvoltiInizio, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabMain
         '
         Me.TabMain.Controls.Add(Me.TabPage1)
         Me.TabMain.Controls.Add(Me.TabPage2)
+        Me.TabMain.Controls.Add(Me.TabPage3)
         Me.TabMain.Location = New System.Drawing.Point(0, 2)
         Me.TabMain.Name = "TabMain"
         Me.TabMain.SelectedIndex = 0
-        Me.TabMain.Size = New System.Drawing.Size(688, 169)
+        Me.TabMain.Size = New System.Drawing.Size(780, 208)
         Me.TabMain.TabIndex = 0
         '
         'TabPage1
@@ -66,7 +83,7 @@ Partial Class Main
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(680, 143)
+        Me.TabPage1.Size = New System.Drawing.Size(721, 182)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "TabPage1"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -145,7 +162,7 @@ Partial Class Main
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(680, 143)
+        Me.TabPage2.Size = New System.Drawing.Size(721, 182)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "TabPage2"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -183,9 +200,129 @@ Partial Class Main
         Me.tab2LabelNomeUtente.TabIndex = 0
         Me.tab2LabelNomeUtente.Text = "Nome utente"
         '
+        'TabPage3
+        '
+        Me.TabPage3.Controls.Add(Me.btnCopiaTemiSelezionaScript)
+        Me.TabPage3.Controls.Add(Me.txtCopiaTemiPathToScript)
+        Me.TabPage3.Controls.Add(Me.lblCopiaTemiScript)
+        Me.TabPage3.Controls.Add(Me.NumericUpDownTemiSvoltiFine)
+        Me.TabPage3.Controls.Add(Me.btnSelezionaCartella)
+        Me.TabPage3.Controls.Add(Me.ProgressBar)
+        Me.TabPage3.Controls.Add(Me.TextBoxDestinazione)
+        Me.TabPage3.Controls.Add(Me.LabelDestinazione)
+        Me.TabPage3.Controls.Add(Me.btnCopiaTemi)
+        Me.TabPage3.Controls.Add(Me.NumericUpDownTemiSvoltiInizio)
+        Me.TabPage3.Controls.Add(Me.LabelTemi)
+        Me.TabPage3.Controls.Add(Me.tab3welcome)
+        Me.TabPage3.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage3.Name = "TabPage3"
+        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage3.Size = New System.Drawing.Size(772, 182)
+        Me.TabPage3.TabIndex = 2
+        Me.TabPage3.Text = "TabPage3"
+        Me.TabPage3.UseVisualStyleBackColor = True
+        '
+        'btnCopiaTemiSelezionaScript
+        '
+        Me.btnCopiaTemiSelezionaScript.Location = New System.Drawing.Point(551, 50)
+        Me.btnCopiaTemiSelezionaScript.Name = "btnCopiaTemiSelezionaScript"
+        Me.btnCopiaTemiSelezionaScript.Size = New System.Drawing.Size(23, 20)
+        Me.btnCopiaTemiSelezionaScript.TabIndex = 36
+        Me.btnCopiaTemiSelezionaScript.Text = "..."
+        Me.btnCopiaTemiSelezionaScript.UseVisualStyleBackColor = True
+        '
+        'txtCopiaTemiPathToScript
+        '
+        Me.txtCopiaTemiPathToScript.Location = New System.Drawing.Point(139, 50)
+        Me.txtCopiaTemiPathToScript.Name = "txtCopiaTemiPathToScript"
+        Me.txtCopiaTemiPathToScript.Size = New System.Drawing.Size(406, 20)
+        Me.txtCopiaTemiPathToScript.TabIndex = 35
+        '
+        'lblCopiaTemiScript
+        '
+        Me.lblCopiaTemiScript.AutoSize = True
+        Me.lblCopiaTemiScript.Location = New System.Drawing.Point(17, 54)
+        Me.lblCopiaTemiScript.Name = "lblCopiaTemiScript"
+        Me.lblCopiaTemiScript.Size = New System.Drawing.Size(81, 13)
+        Me.lblCopiaTemiScript.TabIndex = 34
+        Me.lblCopiaTemiScript.Text = "Seleziona script"
+        '
+        'NumericUpDownTemiSvoltiFine
+        '
+        Me.NumericUpDownTemiSvoltiFine.Location = New System.Drawing.Point(190, 19)
+        Me.NumericUpDownTemiSvoltiFine.Name = "NumericUpDownTemiSvoltiFine"
+        Me.NumericUpDownTemiSvoltiFine.Size = New System.Drawing.Size(40, 20)
+        Me.NumericUpDownTemiSvoltiFine.TabIndex = 26
+        '
+        'btnSelezionaCartella
+        '
+        Me.btnSelezionaCartella.Location = New System.Drawing.Point(550, 94)
+        Me.btnSelezionaCartella.Name = "btnSelezionaCartella"
+        Me.btnSelezionaCartella.Size = New System.Drawing.Size(24, 23)
+        Me.btnSelezionaCartella.TabIndex = 33
+        Me.btnSelezionaCartella.Text = "..."
+        Me.btnSelezionaCartella.UseVisualStyleBackColor = True
+        '
+        'ProgressBar
+        '
+        Me.ProgressBar.Location = New System.Drawing.Point(20, 139)
+        Me.ProgressBar.Name = "ProgressBar"
+        Me.ProgressBar.Size = New System.Drawing.Size(287, 23)
+        Me.ProgressBar.TabIndex = 32
+        '
+        'TextBoxDestinazione
+        '
+        Me.TextBoxDestinazione.Location = New System.Drawing.Point(137, 96)
+        Me.TextBoxDestinazione.Name = "TextBoxDestinazione"
+        Me.TextBoxDestinazione.Size = New System.Drawing.Size(409, 20)
+        Me.TextBoxDestinazione.TabIndex = 27
+        Me.TextBoxDestinazione.Text = "O:\"
+        '
+        'LabelDestinazione
+        '
+        Me.LabelDestinazione.AutoSize = True
+        Me.LabelDestinazione.Location = New System.Drawing.Point(17, 99)
+        Me.LabelDestinazione.Name = "LabelDestinazione"
+        Me.LabelDestinazione.Size = New System.Drawing.Size(103, 13)
+        Me.LabelDestinazione.TabIndex = 30
+        Me.LabelDestinazione.Text = "Dove salvaere i temi"
+        '
+        'btnCopiaTemi
+        '
+        Me.btnCopiaTemi.Location = New System.Drawing.Point(321, 139)
+        Me.btnCopiaTemi.Name = "btnCopiaTemi"
+        Me.btnCopiaTemi.Size = New System.Drawing.Size(75, 23)
+        Me.btnCopiaTemi.TabIndex = 29
+        Me.btnCopiaTemi.Text = "Ok"
+        Me.btnCopiaTemi.UseVisualStyleBackColor = True
+        '
+        'NumericUpDownTemiSvoltiInizio
+        '
+        Me.NumericUpDownTemiSvoltiInizio.Location = New System.Drawing.Point(138, 19)
+        Me.NumericUpDownTemiSvoltiInizio.Name = "NumericUpDownTemiSvoltiInizio"
+        Me.NumericUpDownTemiSvoltiInizio.Size = New System.Drawing.Size(45, 20)
+        Me.NumericUpDownTemiSvoltiInizio.TabIndex = 25
+        '
+        'LabelTemi
+        '
+        Me.LabelTemi.AutoSize = True
+        Me.LabelTemi.Location = New System.Drawing.Point(18, 21)
+        Me.LabelTemi.Name = "LabelTemi"
+        Me.LabelTemi.Size = New System.Drawing.Size(110, 13)
+        Me.LabelTemi.TabIndex = 28
+        Me.LabelTemi.Text = "Copia temi (da 1 a 90)"
+        '
+        'tab3welcome
+        '
+        Me.tab3welcome.Location = New System.Drawing.Point(592, 37)
+        Me.tab3welcome.Name = "tab3welcome"
+        Me.tab3welcome.Size = New System.Drawing.Size(166, 98)
+        Me.tab3welcome.TabIndex = 15
+        Me.tab3welcome.Text = "welcome msg"
+        '
         'btnEsci
         '
-        Me.btnEsci.Location = New System.Drawing.Point(600, 177)
+        Me.btnEsci.Location = New System.Drawing.Point(599, 216)
         Me.btnEsci.Name = "btnEsci"
         Me.btnEsci.Size = New System.Drawing.Size(75, 23)
         Me.btnEsci.TabIndex = 11
@@ -196,7 +333,7 @@ Partial Class Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(686, 207)
+        Me.ClientSize = New System.Drawing.Size(784, 251)
         Me.Controls.Add(Me.btnEsci)
         Me.Controls.Add(Me.TabMain)
         Me.Name = "Main"
@@ -206,6 +343,10 @@ Partial Class Main
         Me.TabPage1.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
+        Me.TabPage3.ResumeLayout(False)
+        Me.TabPage3.PerformLayout()
+        CType(Me.NumericUpDownTemiSvoltiFine, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NumericUpDownTemiSvoltiInizio, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -225,4 +366,17 @@ Partial Class Main
     Friend WithEvents tab2welcome As System.Windows.Forms.Label
     Friend WithEvents Tab1ButtonEsegui As Button
     Friend WithEvents Tab2ButtonEsegui As Button
+    Friend WithEvents TabPage3 As TabPage
+    Friend WithEvents NumericUpDownTemiSvoltiFine As NumericUpDown
+    Friend WithEvents btnSelezionaCartella As Button
+    Friend WithEvents ProgressBar As ProgressBar
+    Friend WithEvents TextBoxDestinazione As TextBox
+    Friend WithEvents LabelDestinazione As Label
+    Friend WithEvents btnCopiaTemi As Button
+    Friend WithEvents NumericUpDownTemiSvoltiInizio As NumericUpDown
+    Friend WithEvents LabelTemi As Label
+    Friend WithEvents tab3welcome As Label
+    Friend WithEvents btnCopiaTemiSelezionaScript As Button
+    Friend WithEvents txtCopiaTemiPathToScript As TextBox
+    Friend WithEvents lblCopiaTemiScript As Label
 End Class
