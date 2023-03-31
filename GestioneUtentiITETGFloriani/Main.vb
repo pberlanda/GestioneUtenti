@@ -277,24 +277,6 @@ Public Class Main
 
     End Sub
 
-    Private Function convertiNumeroTema(ByVal numeroTema As Decimal) As String
-
-        ' Aggiunge 0 davanti al numero se minore di 10
-
-        If numeroTema < 10 Then
-            convertiNumeroTema = "0" + CStr(numeroTema)
-        Else
-            convertiNumeroTema = CStr(numeroTema)
-        End If
-
-    End Function
-
-    Private Function componePercorsoOrigine(ByVal numeroTema As String) As String
-
-        componePercorsoOrigine = "\\arlecchino\tema" + numeroTema + "$"
-
-    End Function
-
     Private Function controlloCopiaTemi() As Boolean
 
         ' fallito
