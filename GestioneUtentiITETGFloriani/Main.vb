@@ -236,6 +236,8 @@ Public Class Main
     End Sub
 
     Private Sub btnCopiaTemi_Click(sender As Object, e As EventArgs) Handles btnCopiaTemi.Click
+        Dim sCmd As String
+        Dim strInizio, strFine As String
 
         ' controllo
 
@@ -244,6 +246,19 @@ Public Class Main
         ' Chiede conferma
 
         If MsgBox("Sei sicuro di voler copiare tutti i temi nella cartella ?", vbYesNo) = vbNo Then Exit Sub
+
+        strInizio = CStr(NumericUpDownTemiSvoltiInizio.Value)
+        strFine = CStr(NumericUpDownTemiSvoltiFine.Value)
+
+        ' esegue lo script
+
+        ' inizializza la stringa del comando
+        sCmd = txtTabCopiaTemiPathToScript.Text + " " + strInizio + " " + strFine
+
+        Debug.WriteLine(sCmd)
+
+        ' run
+        'Shell(sCmd, AppWinStyle.NormalFocus)
 
         ' Ok
 
