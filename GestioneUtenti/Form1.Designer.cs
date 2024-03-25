@@ -30,6 +30,7 @@
         {
             tabControl = new TabControl();
             tabPage1 = new TabPage();
+            tabNuovoUtente_btnCreaUtente = new Button();
             tabNuovoUtente_txtClasse = new TextBox();
             tabNuovoUtente_lblClasse = new Label();
             tabNuovoUtente_cboTipo = new ComboBox();
@@ -41,7 +42,6 @@
             tabPage2 = new TabPage();
             tabPage3 = new TabPage();
             btnEsci = new Button();
-            tabNuovoUtente_btnCreaUtente = new Button();
             tabControl.SuspendLayout();
             tabPage1.SuspendLayout();
             SuspendLayout();
@@ -76,6 +76,16 @@
             tabPage1.Text = "tabPage1";
             tabPage1.UseVisualStyleBackColor = true;
             // 
+            // tabNuovoUtente_btnCreaUtente
+            // 
+            tabNuovoUtente_btnCreaUtente.Location = new Point(110, 146);
+            tabNuovoUtente_btnCreaUtente.Name = "tabNuovoUtente_btnCreaUtente";
+            tabNuovoUtente_btnCreaUtente.Size = new Size(82, 23);
+            tabNuovoUtente_btnCreaUtente.TabIndex = 7;
+            tabNuovoUtente_btnCreaUtente.Text = "&Crea utente";
+            tabNuovoUtente_btnCreaUtente.UseVisualStyleBackColor = true;
+            tabNuovoUtente_btnCreaUtente.Click += tabNuovoUtente_btnCreaUtente_Click;
+            // 
             // tabNuovoUtente_txtClasse
             // 
             tabNuovoUtente_txtClasse.Location = new Point(106, 105);
@@ -94,11 +104,13 @@
             // 
             // tabNuovoUtente_cboTipo
             // 
+            tabNuovoUtente_cboTipo.DropDownStyle = ComboBoxStyle.DropDownList;
             tabNuovoUtente_cboTipo.FormattingEnabled = true;
             tabNuovoUtente_cboTipo.Location = new Point(106, 76);
             tabNuovoUtente_cboTipo.Name = "tabNuovoUtente_cboTipo";
             tabNuovoUtente_cboTipo.Size = new Size(280, 23);
             tabNuovoUtente_cboTipo.TabIndex = 3;
+            tabNuovoUtente_cboTipo.SelectedIndexChanged += tabNuovoUtente_cboTipo_SelectedIndexChanged;
             // 
             // tabNuovoUtente_lblTipo
             // 
@@ -170,16 +182,6 @@
             btnEsci.Text = "&Esci";
             btnEsci.UseVisualStyleBackColor = true;
             btnEsci.Click += btnEsci_Click;
-            // 
-            // tabNuovoUtente_btnCreaUtente
-            // 
-            tabNuovoUtente_btnCreaUtente.Location = new Point(110, 146);
-            tabNuovoUtente_btnCreaUtente.Name = "tabNuovoUtente_btnCreaUtente";
-            tabNuovoUtente_btnCreaUtente.Size = new Size(82, 23);
-            tabNuovoUtente_btnCreaUtente.TabIndex = 7;
-            tabNuovoUtente_btnCreaUtente.Text = "&Crea utente";
-            tabNuovoUtente_btnCreaUtente.UseVisualStyleBackColor = true;
-            tabNuovoUtente_btnCreaUtente.Click += tabNuovoUtente_btnCreaUtente_Click;
             // 
             // frmGestioneUtenti
             // 

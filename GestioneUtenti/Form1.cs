@@ -28,11 +28,6 @@ namespace GestioneUtenti
             tabNuovoUtente_cboTipo.Items.Add("Assistente di laboratorio");
         }
 
-        private void tabNuovoUtente_lblClasse_gotFocus(object sender, EventArgs e)
-        {
-            tabNuovoUtente_txtNome.BackColor = Color.Yellow;
-        }
-
         private void tabNuovoUtente_txtNome_GotFocus(object sender, EventArgs e)
         {
             tabNuovoUtente_txtNome.BackColor = Color.Yellow;
@@ -65,7 +60,7 @@ namespace GestioneUtenti
             }
 
             // tipo utente deve essere selezionato
-            if (tabNuovoUtente_cboTipo.SelectedItem== null)
+            if (tabNuovoUtente_cboTipo.SelectedItem == null)
             {
                 MessageBox.Show("Tipo non selezionato!", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 tabNuovoUtente_cboTipo.Focus();
@@ -74,7 +69,7 @@ namespace GestioneUtenti
             }
 
             // controlla la classe se tipo utente ии studente
-            if (tabNuovoUtente_cboTipo.SelectedIndex==0)
+            if (tabNuovoUtente_cboTipo.SelectedIndex == 0)
             {
                 MessageBox.Show("Classe non immessa!", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 tabNuovoUtente_txtClasse.Focus();
@@ -84,6 +79,22 @@ namespace GestioneUtenti
 
             // arrivati qui significa che il controllo ии stato completato
             return true;
+        }
+
+        private void tabNuovoUtente_cboTipo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        
+            if (tabNuovoUtente_cboTipo.SelectedItem != null)
+            {
+                if (tabNuovoUtente_cboTipo.SelectedIndex == 0)
+                {
+                    tabNuovoUtente_txtClasse.Enabled=true;
+                } else
+                {
+                    tabNuovoUtente_txtClasse.Enabled = false;
+                }
+            }
+
         }
     }
 }
