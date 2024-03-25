@@ -1,3 +1,5 @@
+using System.Diagnostics;
+
 namespace GestioneUtenti
 {
     public partial class frmGestioneUtenti : Form
@@ -43,6 +45,33 @@ namespace GestioneUtenti
             {
                 return;
             }
+
+            // esegui la creazione dell'utente
+            creaUtente();
+        }
+
+        private void creaUtente()
+        {
+            // Specify the path to your batch file
+            string batchFilePath = @"D:\dev\GestioneUtenti\command.cmd";
+
+            // Create a new process
+            Process process = new Process();
+
+            // Specify the file name (batch file) to be executed
+            process.StartInfo.FileName = "cmd.exe";
+
+            // Pass the batch file path as an argument
+            process.StartInfo.Arguments = $"/C \"{batchFilePath}\"";
+
+            // Ensure that the process window is hidden
+            //process.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+
+            // Start the process
+            process.Start();
+
+            // Wait for the process to exit
+            process.WaitForExit();
         }
 
         private Boolean controllo()
@@ -75,10 +104,12 @@ namespace GestioneUtenti
             // controlla la classe se tipo utente ии studente
             if (tabNuovoUtente_cboTipo.SelectedIndex == 0)
             {
-                MessageBox.Show("Classe non immessa!", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                tabNuovoUtente_txtClasse.Focus();
-                return false;
-
+                if (tabNuovoUtente_txtClasse.Text == "")
+                {
+                    MessageBox.Show("Classe non immessa!", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    tabNuovoUtente_txtClasse.Focus();
+                    return false;
+                }
             }
 
             // arrivati qui significa che il controllo ии stato completato
