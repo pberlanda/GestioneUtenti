@@ -26,6 +26,10 @@ namespace GestioneUtenti
             tabNuovoUtente_cboTipo.Items.Add("Studente");
             tabNuovoUtente_cboTipo.Items.Add("Docente");
             tabNuovoUtente_cboTipo.Items.Add("Assistente di laboratorio");
+            
+            // imposta tipo studente
+            tabNuovoUtente_cboTipo.SelectedIndex= 0;
+
         }
 
         private void tabNuovoUtente_txtNome_GotFocus(object sender, EventArgs e)
