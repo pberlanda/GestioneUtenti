@@ -28,9 +28,9 @@ namespace GestioneUtenti
             tabNuovoUtente_cboTipo.Items.Add("Studente");
             tabNuovoUtente_cboTipo.Items.Add("Docente");
             tabNuovoUtente_cboTipo.Items.Add("Assistente di laboratorio");
-            
+
             // imposta tipo studente
-            tabNuovoUtente_cboTipo.SelectedIndex= 0;
+            tabNuovoUtente_cboTipo.SelectedIndex = 0;
 
         }
 
@@ -118,18 +118,55 @@ namespace GestioneUtenti
 
         private void tabNuovoUtente_cboTipo_SelectedIndexChanged(object sender, EventArgs e)
         {
-        
+
             if (tabNuovoUtente_cboTipo.SelectedItem != null)
             {
                 if (tabNuovoUtente_cboTipo.SelectedIndex == 0)
                 {
-                    tabNuovoUtente_txtClasse.Enabled=true;
-                } else
+                    tabNuovoUtente_txtClasse.Enabled = true;
+                }
+                else
                 {
                     tabNuovoUtente_txtClasse.Enabled = false;
                 }
             }
 
+        }
+
+        private void tabNuovoUtente_lblCognome_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabNuovoUtente_txtClasse_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabNuovoUtente_txtNome_TextChanged(object sender, EventArgs e)
+        {
+            componiUsername();
+        }
+
+        private void componiUsername()
+        {
+
+            string nome, cognome, username;
+
+            nome = tabNuovoUtente_txtNome.Text.Trim();
+            cognome = tabNuovoUtente_txtCognome.Text.Trim();
+
+            nome = nome.ToLower();
+            cognome=cognome.ToLower();  
+
+            username = nome + "." + cognome;
+
+            tabNuovoUtente_txtUsername.Text = username;
+        }
+
+        private void tabNuovoUtente_txtCognome_TextChanged(object sender, EventArgs e)
+        {
+            componiUsername();
         }
     }
 }
