@@ -88,8 +88,17 @@ namespace GestioneUtenti
             if (tabNuovoUtente_txtCognome.Text == "")
             {
                 MessageBox.Show("Cognome non immesso!", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                tabNuovoUtente_txtUsername.Focus();
+                return false;
+            }
+
+            // username deve essere immesso
+            if (tabNuovoUtente_txtUsername.Text == "")
+            {
+                MessageBox.Show("Username non immesso!", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 tabNuovoUtente_txtCognome.Focus();
                 return false;
+
             }
 
             // tipo utente deve essere selezionato
@@ -157,7 +166,7 @@ namespace GestioneUtenti
             cognome = tabNuovoUtente_txtCognome.Text.Trim();
 
             nome = nome.ToLower();
-            cognome=cognome.ToLower();  
+            cognome = cognome.ToLower();
 
             username = nome + "." + cognome;
 
@@ -165,6 +174,11 @@ namespace GestioneUtenti
         }
 
         private void tabNuovoUtente_txtCognome_TextChanged(object sender, EventArgs e)
+        {
+            componiUsername();
+        }
+
+        private void tabNuovoUtente_btnAutocompletamentoUsername_Click(object sender, EventArgs e)
         {
             componiUsername();
         }

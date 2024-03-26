@@ -30,6 +30,7 @@
         {
             tabControl = new TabControl();
             tabPage1 = new TabPage();
+            tabNuovoUtente_btnAutocompletamentoUsername = new Button();
             tabNuovoUtente_txtUsername = new TextBox();
             tabNuovoUtente_lblUsername = new Label();
             tabNuovoUtente_btnCreaUtente = new Button();
@@ -62,6 +63,7 @@
             // 
             // tabPage1
             // 
+            tabPage1.Controls.Add(tabNuovoUtente_btnAutocompletamentoUsername);
             tabPage1.Controls.Add(tabNuovoUtente_txtUsername);
             tabPage1.Controls.Add(tabNuovoUtente_lblUsername);
             tabPage1.Controls.Add(tabNuovoUtente_btnCreaUtente);
@@ -81,6 +83,16 @@
             tabPage1.TabIndex = 0;
             tabPage1.Text = "tabPage1";
             tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabNuovoUtente_btnAutocompletamentoUsername
+            // 
+            tabNuovoUtente_btnAutocompletamentoUsername.Location = new Point(720, 154);
+            tabNuovoUtente_btnAutocompletamentoUsername.Name = "tabNuovoUtente_btnAutocompletamentoUsername";
+            tabNuovoUtente_btnAutocompletamentoUsername.Size = new Size(79, 45);
+            tabNuovoUtente_btnAutocompletamentoUsername.TabIndex = 4;
+            tabNuovoUtente_btnAutocompletamentoUsername.Text = "auto";
+            tabNuovoUtente_btnAutocompletamentoUsername.UseVisualStyleBackColor = true;
+            tabNuovoUtente_btnAutocompletamentoUsername.Click += tabNuovoUtente_btnAutocompletamentoUsername_Click;
             // 
             // tabNuovoUtente_txtUsername
             // 
@@ -256,5 +268,6 @@
         private Button tabNuovoUtente_btnCreaUtente;
         private Label tabNuovoUtente_lblUsername;
         private TextBox tabNuovoUtente_txtUsername;
+        private Button tabNuovoUtente_btnAutocompletamentoUsername;
     }
 }
