@@ -30,6 +30,7 @@
         {
             tabControl = new TabControl();
             tabPage1 = new TabPage();
+            pictureBox1 = new PictureBox();
             tabNuovoUtente_btnAutocompletamentoUsername = new Button();
             tabNuovoUtente_txtUsername = new TextBox();
             tabNuovoUtente_lblUsername = new Label();
@@ -57,6 +58,7 @@
             btnEsci = new Button();
             tabControl.SuspendLayout();
             tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             tabPage2.SuspendLayout();
             tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)tabCopiaTemi_txtTemaFine).BeginInit();
@@ -72,11 +74,12 @@
             tabControl.Margin = new Padding(6);
             tabControl.Name = "tabControl";
             tabControl.SelectedIndex = 0;
-            tabControl.Size = new Size(1482, 855);
+            tabControl.Size = new Size(1198, 634);
             tabControl.TabIndex = 0;
             // 
             // tabPage1
             // 
+            tabPage1.Controls.Add(pictureBox1);
             tabPage1.Controls.Add(tabNuovoUtente_btnAutocompletamentoUsername);
             tabPage1.Controls.Add(tabNuovoUtente_txtUsername);
             tabPage1.Controls.Add(tabNuovoUtente_lblUsername);
@@ -93,14 +96,25 @@
             tabPage1.Margin = new Padding(6);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(6);
-            tabPage1.Size = new Size(1466, 801);
+            tabPage1.Size = new Size(1182, 580);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "tabPage1";
             tabPage1.UseVisualStyleBackColor = true;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.icons8_add_user_group_woman_man_48;
+            pictureBox1.Location = new Point(0, 419);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(126, 161);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 9;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click_1;
+            // 
             // tabNuovoUtente_btnAutocompletamentoUsername
             // 
-            tabNuovoUtente_btnAutocompletamentoUsername.Location = new Point(721, 154);
+            tabNuovoUtente_btnAutocompletamentoUsername.Location = new Point(787, 190);
             tabNuovoUtente_btnAutocompletamentoUsername.Margin = new Padding(4, 2, 4, 2);
             tabNuovoUtente_btnAutocompletamentoUsername.Name = "tabNuovoUtente_btnAutocompletamentoUsername";
             tabNuovoUtente_btnAutocompletamentoUsername.Size = new Size(80, 45);
@@ -111,7 +125,7 @@
             // 
             // tabNuovoUtente_txtUsername
             // 
-            tabNuovoUtente_txtUsername.Location = new Point(197, 158);
+            tabNuovoUtente_txtUsername.Location = new Point(263, 194);
             tabNuovoUtente_txtUsername.Margin = new Padding(4, 2, 4, 2);
             tabNuovoUtente_txtUsername.Name = "tabNuovoUtente_txtUsername";
             tabNuovoUtente_txtUsername.Size = new Size(517, 39);
@@ -120,7 +134,7 @@
             // tabNuovoUtente_lblUsername
             // 
             tabNuovoUtente_lblUsername.AutoSize = true;
-            tabNuovoUtente_lblUsername.Location = new Point(26, 164);
+            tabNuovoUtente_lblUsername.Location = new Point(92, 200);
             tabNuovoUtente_lblUsername.Margin = new Padding(4, 0, 4, 0);
             tabNuovoUtente_lblUsername.Name = "tabNuovoUtente_lblUsername";
             tabNuovoUtente_lblUsername.Size = new Size(121, 32);
@@ -129,28 +143,28 @@
             // 
             // tabNuovoUtente_btnCreaUtente
             // 
-            tabNuovoUtente_btnCreaUtente.Location = new Point(197, 395);
+            tabNuovoUtente_btnCreaUtente.Location = new Point(263, 431);
             tabNuovoUtente_btnCreaUtente.Margin = new Padding(6);
             tabNuovoUtente_btnCreaUtente.Name = "tabNuovoUtente_btnCreaUtente";
             tabNuovoUtente_btnCreaUtente.Size = new Size(152, 49);
-            tabNuovoUtente_btnCreaUtente.TabIndex = 6;
+            tabNuovoUtente_btnCreaUtente.TabIndex = 7;
             tabNuovoUtente_btnCreaUtente.Text = "&Crea utente";
             tabNuovoUtente_btnCreaUtente.UseVisualStyleBackColor = true;
             tabNuovoUtente_btnCreaUtente.Click += tabNuovoUtente_btnCreaUtente_Click;
             // 
             // tabNuovoUtente_txtClasse
             // 
-            tabNuovoUtente_txtClasse.Location = new Point(197, 297);
+            tabNuovoUtente_txtClasse.Location = new Point(263, 333);
             tabNuovoUtente_txtClasse.Margin = new Padding(6);
             tabNuovoUtente_txtClasse.Name = "tabNuovoUtente_txtClasse";
             tabNuovoUtente_txtClasse.Size = new Size(257, 39);
-            tabNuovoUtente_txtClasse.TabIndex = 5;
+            tabNuovoUtente_txtClasse.TabIndex = 6;
             tabNuovoUtente_txtClasse.TextChanged += tabNuovoUtente_txtClasse_TextChanged;
             // 
             // tabNuovoUtente_lblClasse
             // 
             tabNuovoUtente_lblClasse.AutoSize = true;
-            tabNuovoUtente_lblClasse.Location = new Point(26, 303);
+            tabNuovoUtente_lblClasse.Location = new Point(92, 339);
             tabNuovoUtente_lblClasse.Margin = new Padding(6, 0, 6, 0);
             tabNuovoUtente_lblClasse.Name = "tabNuovoUtente_lblClasse";
             tabNuovoUtente_lblClasse.Size = new Size(80, 32);
@@ -161,17 +175,17 @@
             // 
             tabNuovoUtente_cboTipo.DropDownStyle = ComboBoxStyle.DropDownList;
             tabNuovoUtente_cboTipo.FormattingEnabled = true;
-            tabNuovoUtente_cboTipo.Location = new Point(197, 230);
+            tabNuovoUtente_cboTipo.Location = new Point(263, 266);
             tabNuovoUtente_cboTipo.Margin = new Padding(6);
             tabNuovoUtente_cboTipo.Name = "tabNuovoUtente_cboTipo";
             tabNuovoUtente_cboTipo.Size = new Size(517, 40);
-            tabNuovoUtente_cboTipo.TabIndex = 4;
+            tabNuovoUtente_cboTipo.TabIndex = 5;
             tabNuovoUtente_cboTipo.SelectedIndexChanged += tabNuovoUtente_cboTipo_SelectedIndexChanged;
             // 
             // tabNuovoUtente_lblTipo
             // 
             tabNuovoUtente_lblTipo.AutoSize = true;
-            tabNuovoUtente_lblTipo.Location = new Point(26, 235);
+            tabNuovoUtente_lblTipo.Location = new Point(92, 271);
             tabNuovoUtente_lblTipo.Margin = new Padding(6, 0, 6, 0);
             tabNuovoUtente_lblTipo.Name = "tabNuovoUtente_lblTipo";
             tabNuovoUtente_lblTipo.Size = new Size(61, 32);
@@ -181,7 +195,7 @@
             // tabNuovoUtente_lblCognome
             // 
             tabNuovoUtente_lblCognome.AutoSize = true;
-            tabNuovoUtente_lblCognome.Location = new Point(26, 107);
+            tabNuovoUtente_lblCognome.Location = new Point(92, 143);
             tabNuovoUtente_lblCognome.Margin = new Padding(6, 0, 6, 0);
             tabNuovoUtente_lblCognome.Name = "tabNuovoUtente_lblCognome";
             tabNuovoUtente_lblCognome.Size = new Size(119, 32);
@@ -191,7 +205,7 @@
             // 
             // tabNuovoUtente_txtCognome
             // 
-            tabNuovoUtente_txtCognome.Location = new Point(197, 100);
+            tabNuovoUtente_txtCognome.Location = new Point(263, 136);
             tabNuovoUtente_txtCognome.Margin = new Padding(6);
             tabNuovoUtente_txtCognome.Name = "tabNuovoUtente_txtCognome";
             tabNuovoUtente_txtCognome.Size = new Size(517, 39);
@@ -200,7 +214,7 @@
             // 
             // tabNuovoUtente_txtNome
             // 
-            tabNuovoUtente_txtNome.Location = new Point(197, 38);
+            tabNuovoUtente_txtNome.Location = new Point(263, 74);
             tabNuovoUtente_txtNome.Margin = new Padding(6);
             tabNuovoUtente_txtNome.Name = "tabNuovoUtente_txtNome";
             tabNuovoUtente_txtNome.Size = new Size(517, 39);
@@ -210,7 +224,7 @@
             // tabNuovoUtente_lblNome
             // 
             tabNuovoUtente_lblNome.AutoSize = true;
-            tabNuovoUtente_lblNome.Location = new Point(26, 45);
+            tabNuovoUtente_lblNome.Location = new Point(92, 81);
             tabNuovoUtente_lblNome.Margin = new Padding(6, 0, 6, 0);
             tabNuovoUtente_lblNome.Name = "tabNuovoUtente_lblNome";
             tabNuovoUtente_lblNome.Size = new Size(80, 32);
@@ -228,18 +242,18 @@
             tabPage2.Margin = new Padding(6);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(6);
-            tabPage2.Size = new Size(1466, 801);
+            tabPage2.Size = new Size(1182, 580);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "tabPage2";
             tabPage2.UseVisualStyleBackColor = true;
             // 
             // TabElimina_btnElimina
             // 
-            TabElimina_btnElimina.Location = new Point(559, 429);
+            TabElimina_btnElimina.Location = new Point(247, 202);
             TabElimina_btnElimina.Margin = new Padding(6);
             TabElimina_btnElimina.Name = "TabElimina_btnElimina";
             TabElimina_btnElimina.Size = new Size(152, 49);
-            TabElimina_btnElimina.TabIndex = 13;
+            TabElimina_btnElimina.TabIndex = 10;
             TabElimina_btnElimina.Text = "&Elimina utente";
             TabElimina_btnElimina.UseVisualStyleBackColor = true;
             TabElimina_btnElimina.Click += TabElimina_btnElimina_Click;
@@ -248,16 +262,17 @@
             // 
             TabElimina_cboTipo.DropDownStyle = ComboBoxStyle.DropDownList;
             TabElimina_cboTipo.FormattingEnabled = true;
-            TabElimina_cboTipo.Location = new Point(559, 367);
+            TabElimina_cboTipo.Location = new Point(247, 140);
             TabElimina_cboTipo.Margin = new Padding(6);
             TabElimina_cboTipo.Name = "TabElimina_cboTipo";
             TabElimina_cboTipo.Size = new Size(517, 40);
-            TabElimina_cboTipo.TabIndex = 11;
+            TabElimina_cboTipo.TabIndex = 9;
+            TabElimina_cboTipo.SelectedIndexChanged += TabElimina_cboTipo_SelectedIndexChanged;
             // 
             // TabElimina_lblTipo
             // 
             TabElimina_lblTipo.AutoSize = true;
-            TabElimina_lblTipo.Location = new Point(388, 371);
+            TabElimina_lblTipo.Location = new Point(76, 144);
             TabElimina_lblTipo.Margin = new Padding(6, 0, 6, 0);
             TabElimina_lblTipo.Name = "TabElimina_lblTipo";
             TabElimina_lblTipo.Size = new Size(61, 32);
@@ -266,16 +281,16 @@
             // 
             // TabElimina_txtUsername
             // 
-            TabElimina_txtUsername.Location = new Point(559, 309);
+            TabElimina_txtUsername.Location = new Point(247, 82);
             TabElimina_txtUsername.Margin = new Padding(4, 2, 4, 2);
             TabElimina_txtUsername.Name = "TabElimina_txtUsername";
             TabElimina_txtUsername.Size = new Size(517, 39);
-            TabElimina_txtUsername.TabIndex = 9;
+            TabElimina_txtUsername.TabIndex = 8;
             // 
             // TabElimina_lblUsername
             // 
             TabElimina_lblUsername.AutoSize = true;
-            TabElimina_lblUsername.Location = new Point(388, 316);
+            TabElimina_lblUsername.Location = new Point(76, 89);
             TabElimina_lblUsername.Margin = new Padding(4, 0, 4, 0);
             TabElimina_lblUsername.Name = "TabElimina_lblUsername";
             TabElimina_lblUsername.Size = new Size(121, 32);
@@ -293,7 +308,7 @@
             tabPage3.Margin = new Padding(6);
             tabPage3.Name = "tabPage3";
             tabPage3.Padding = new Padding(6);
-            tabPage3.Size = new Size(1466, 801);
+            tabPage3.Size = new Size(1182, 580);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "tabPage3";
             tabPage3.UseVisualStyleBackColor = true;
@@ -303,21 +318,21 @@
             tabCopiaTemi_txtTemaFine.Location = new Point(230, 122);
             tabCopiaTemi_txtTemaFine.Name = "tabCopiaTemi_txtTemaFine";
             tabCopiaTemi_txtTemaFine.Size = new Size(113, 39);
-            tabCopiaTemi_txtTemaFine.TabIndex = 6;
+            tabCopiaTemi_txtTemaFine.TabIndex = 12;
             // 
             // tabCopiaTemi_txtTemaInizio
             // 
             tabCopiaTemi_txtTemaInizio.Location = new Point(226, 70);
             tabCopiaTemi_txtTemaInizio.Name = "tabCopiaTemi_txtTemaInizio";
             tabCopiaTemi_txtTemaInizio.Size = new Size(117, 39);
-            tabCopiaTemi_txtTemaInizio.TabIndex = 5;
+            tabCopiaTemi_txtTemaInizio.TabIndex = 11;
             // 
             // tabCopiaTemi_btnEseguiCopia
             // 
             tabCopiaTemi_btnEseguiCopia.Location = new Point(226, 194);
             tabCopiaTemi_btnEseguiCopia.Name = "tabCopiaTemi_btnEseguiCopia";
             tabCopiaTemi_btnEseguiCopia.Size = new Size(195, 44);
-            tabCopiaTemi_btnEseguiCopia.TabIndex = 4;
+            tabCopiaTemi_btnEseguiCopia.TabIndex = 13;
             tabCopiaTemi_btnEseguiCopia.Text = "Esegui copia";
             tabCopiaTemi_btnEseguiCopia.UseVisualStyleBackColor = true;
             tabCopiaTemi_btnEseguiCopia.Click += tabCopiaTemi_btnEseguiCopia_Click;
@@ -343,11 +358,11 @@
             // 
             // btnEsci
             // 
-            btnEsci.Location = new Point(1324, 885);
+            btnEsci.Location = new Point(1047, 650);
             btnEsci.Margin = new Padding(6);
             btnEsci.Name = "btnEsci";
             btnEsci.Size = new Size(139, 49);
-            btnEsci.TabIndex = 1;
+            btnEsci.TabIndex = 14;
             btnEsci.Text = "&Esci";
             btnEsci.UseVisualStyleBackColor = true;
             btnEsci.Click += btnEsci_Click;
@@ -356,16 +371,19 @@
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1486, 960);
+            ClientSize = new Size(1201, 716);
             Controls.Add(btnEsci);
             Controls.Add(tabControl);
             Margin = new Padding(6);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "frmGestioneUtenti";
             Text = "Gestione utenti";
             Load += frmGestioneUtenti_Load;
             tabControl.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             tabPage2.ResumeLayout(false);
             tabPage2.PerformLayout();
             tabPage3.ResumeLayout(false);
@@ -404,5 +422,6 @@
         private Label tabCopiaTemi_lblTemaFine;
         private NumericUpDown tabCopiaTemi_txtTemaFine;
         private NumericUpDown tabCopiaTemi_txtTemaInizio;
+        private PictureBox pictureBox1;
     }
 }

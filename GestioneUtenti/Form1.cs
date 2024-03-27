@@ -201,7 +201,7 @@ namespace GestioneUtenti
         {
             if (tabCopiaTemi_txtTemaInizio.Value == 0)
             {
-                MessageBox.Show("Primo tema non selezionato!", "Errore", MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Primo tema non selezionato!", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 tabCopiaTemi_txtTemaInizio.Focus();
                 return false;
             }
@@ -300,7 +300,7 @@ namespace GestioneUtenti
 
         private void tabCopiaTemi_btnEseguiCopia_Click(object sender, EventArgs e)
         {
-            if (!ControlloCopiaTemi()) {return; }
+            if (!ControlloCopiaTemi()) { return; }
 
             copiaTemi();
 
@@ -330,5 +330,19 @@ namespace GestioneUtenti
             process.WaitForExit();
         }
 
+        private void TabElimina_cboTipo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
