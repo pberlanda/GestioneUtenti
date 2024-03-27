@@ -21,8 +21,12 @@ namespace GestioneUtenti
             tabControl.TabPages[1].Text = "Elimina utente";
             tabControl.TabPages[2].Text = "Raccogli temi";
 
+            // ************
+            // nuovo utente
+            // ************
             tabNuovoUtente_txtNome.Text = "";
             tabNuovoUtente_txtCognome.Text = "";
+            tabNuovoUtente_txtUsername.Text = "";
 
             tabNuovoUtente_cboTipo.Items.Clear();
             tabNuovoUtente_cboTipo.Items.Add("Studente");
@@ -32,6 +36,18 @@ namespace GestioneUtenti
             // imposta tipo studente
             tabNuovoUtente_cboTipo.SelectedIndex = 0;
 
+            // **************
+            // elimina utente
+            // **************
+            TabElimina_txtUsername.Text = "";
+
+            TabElimina_cboTipo.Items.Clear();
+            TabElimina_cboTipo.Items.Add("Studente");
+            TabElimina_cboTipo.Items.Add("Docente");
+            TabElimina_cboTipo.Items.Add("Assistente di laboratorio");
+
+            // imposta tipo studente
+            TabElimina_cboTipo.SelectedIndex = 0;
         }
 
         private void tabNuovoUtente_txtNome_GotFocus(object sender, EventArgs e)
@@ -41,7 +57,7 @@ namespace GestioneUtenti
 
         private void tabNuovoUtente_btnCreaUtente_Click(object sender, EventArgs e)
         {
-            if (!controllo())
+            if (!controlloNuovoUtente())
             {
                 return;
             }
@@ -73,8 +89,31 @@ namespace GestioneUtenti
             // Wait for the process to exit
             process.WaitForExit();
         }
+        private void eliminaUtente()
+        {
+            // Specify the path to your batch file
+            string batchFilePath = @"D:\dev\GestioneUtenti\command.cmd";
 
-        private Boolean controllo()
+            // Create a new process
+            Process process = new Process();
+
+            // Specify the file name (batch file) to be executed
+            process.StartInfo.FileName = "cmd.exe";
+
+            // Pass the batch file path as an argument
+            process.StartInfo.Arguments = $"/C \"{batchFilePath}\"";
+
+            // Ensure that the process window is hidden
+            //process.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+
+            // Start the process
+            process.Start();
+
+            // Wait for the process to exit
+            process.WaitForExit();
+        }
+
+        private Boolean controlloNuovoUtente()
         {
             // nome deve essere immesso
             if (tabNuovoUtente_txtNome.Text == "")
@@ -88,7 +127,7 @@ namespace GestioneUtenti
             if (tabNuovoUtente_txtCognome.Text == "")
             {
                 MessageBox.Show("Cognome non immesso!", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                tabNuovoUtente_txtUsername.Focus();
+                tabNuovoUtente_txtCognome.Focus();
                 return false;
             }
 
@@ -96,9 +135,8 @@ namespace GestioneUtenti
             if (tabNuovoUtente_txtUsername.Text == "")
             {
                 MessageBox.Show("Username non immesso!", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                tabNuovoUtente_txtCognome.Focus();
+                tabNuovoUtente_txtUsername.Focus();
                 return false;
-
             }
 
             // tipo utente deve essere selezionato
@@ -107,7 +145,6 @@ namespace GestioneUtenti
                 MessageBox.Show("Tipo non selezionato!", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 tabNuovoUtente_cboTipo.Focus();
                 return false;
-
             }
 
             // controlla la classe se tipo utente ии studente
@@ -125,6 +162,27 @@ namespace GestioneUtenti
             return true;
         }
 
+        private Boolean controlloEliminaUtente()
+        {
+            // username deve essere immesso
+            if (TabElimina_txtUsername.Text == "")
+            {
+                MessageBox.Show("Username non immesso!", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                TabElimina_txtUsername.Focus();
+                return false;
+
+            }
+
+            // tipo utente deve essere selezionato
+            if (TabElimina_cboTipo.SelectedItem == null)
+            {
+                MessageBox.Show("Tipo non selezionato!", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                TabElimina_cboTipo.Focus();
+                return false;
+            }
+            // arrivati qui significa che il controllo ии stato completato
+            return true;
+        }
         private void tabNuovoUtente_cboTipo_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -160,6 +218,12 @@ namespace GestioneUtenti
         private void componiUsername()
         {
 
+            // se nome e cognome non sono immessi termina
+            if (tabNuovoUtente_txtNome.Text == "" & tabNuovoUtente_txtCognome.Text == "")
+            {
+                return;
+            }
+
             string nome, cognome, username;
 
             nome = tabNuovoUtente_txtNome.Text.Trim();
@@ -181,6 +245,13 @@ namespace GestioneUtenti
         private void tabNuovoUtente_btnAutocompletamentoUsername_Click(object sender, EventArgs e)
         {
             componiUsername();
+        }
+
+        private void TabElimina_btnElimina_Click(object sender, EventArgs e)
+        {
+            if (!controlloEliminaUtente()) { return; };
+
+            eliminaUtente();
         }
     }
 }
