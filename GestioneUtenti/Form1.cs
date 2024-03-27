@@ -48,6 +48,19 @@ namespace GestioneUtenti
 
             // imposta tipo studente
             TabElimina_cboTipo.SelectedIndex = 0;
+
+            // **********
+            // copia temi
+            // **********
+
+            tabCopiaTemi_txtTemaInizio.Minimum = 0;
+            tabCopiaTemi_txtTemaInizio.Maximum = 90;
+
+            tabCopiaTemi_txtTemaFine.Minimum = 0;
+            tabCopiaTemi_txtTemaFine.Maximum = 90;
+
+            tabCopiaTemi_txtTemaInizio.Value = 0;
+            tabCopiaTemi_txtTemaFine.Value = 0;
         }
 
         private void tabNuovoUtente_txtNome_GotFocus(object sender, EventArgs e)
@@ -183,6 +196,32 @@ namespace GestioneUtenti
             // arrivati qui significa che il controllo ии stato completato
             return true;
         }
+
+        private Boolean ControlloCopiaTemi()
+        {
+            if (tabCopiaTemi_txtTemaInizio.Value == 0)
+            {
+                MessageBox.Show("Primo tema non selezionato!", "Errore", MessageBoxButtons.OK,MessageBoxIcon.Error);
+                tabCopiaTemi_txtTemaInizio.Focus();
+                return false;
+            }
+
+            if (tabCopiaTemi_txtTemaFine.Value == 0)
+            {
+                MessageBox.Show("Ultimo tema non selezionato!", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                tabCopiaTemi_txtTemaFine.Focus();
+                return false;
+            }
+
+            if (tabCopiaTemi_txtTemaInizio.Value > tabCopiaTemi_txtTemaFine.Value)
+            {
+                MessageBox.Show("Primo tema superiore di ultimo tema!", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                tabCopiaTemi_txtTemaFine.Focus();
+                return false;
+            }
+
+            return true;
+        }
         private void tabNuovoUtente_cboTipo_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -253,5 +292,43 @@ namespace GestioneUtenti
 
             eliminaUtente();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabCopiaTemi_btnEseguiCopia_Click(object sender, EventArgs e)
+        {
+            if (!ControlloCopiaTemi()) {return; }
+
+            copiaTemi();
+
+
+        }
+        private void copiaTemi()
+        {
+            // Specify the path to your batch file
+            string batchFilePath = @"D:\dev\GestioneUtenti\command.cmd";
+
+            // Create a new process
+            Process process = new Process();
+
+            // Specify the file name (batch file) to be executed
+            process.StartInfo.FileName = "cmd.exe";
+
+            // Pass the batch file path as an argument
+            process.StartInfo.Arguments = $"/C \"{batchFilePath}\"";
+
+            // Ensure that the process window is hidden
+            //process.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+
+            // Start the process
+            process.Start();
+
+            // Wait for the process to exit
+            process.WaitForExit();
+        }
+
     }
 }
