@@ -36,7 +36,7 @@ namespace GestioneUtenti
             // imposta tipo studente
             tabNuovoUtente_cboTipo.SelectedIndex = 0;
 
-            tabNuovoUtente_lblTestCmd.Text = "il comando verrà vosualizzato quì";
+            tabNuovoUtente_lblTestCmd.Text = "il comando da eseguire viene visualizzato qu¨¬";
 
             // **************
             // elimina utente
@@ -72,9 +72,22 @@ namespace GestioneUtenti
 
         private void tabNuovoUtente_btnCreaUtente_Click(object sender, EventArgs e)
         {
+            // controlla tutti i dati immessi
             if (!controlloNuovoUtente())
             {
+
                 return;
+            }
+
+            // se non ¨¨ in modalit¨¤ test, chiede conferma prima di proseguire
+            if (!tabNuovoUtente_ckTestMode.Checked) {
+
+
+                if (MessageBox.Show("Stai per creare il nuovo utente " + tabNuovoUtente_txtUsername.Text + ". Proseguire?", "Controllo dati nuovo utente", MessageBoxButtons.YesNo) == DialogResult.No)
+                {
+                    return;
+                }
+
             }
 
             // esegui la creazione dell'utente
@@ -105,7 +118,7 @@ namespace GestioneUtenti
             // test command
             tabNuovoUtente_lblTestCmd.Text = batchFilePath;
 
-            // se in modalità test, termina. Altrimenti prosegue con l'esecuzione del comando
+            // se in modalit?test, termina. Altrimenti prosegue con l'esecuzione del comando
             if (tabNuovoUtente_ckTestMode.Checked == true) { return; }
 
             // Create a new process
