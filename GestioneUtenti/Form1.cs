@@ -189,6 +189,14 @@ namespace GestioneUtenti
                 return false;
             }
 
+            // usernmae non può essere più lungo di 20 caratteri
+            if (tabNuovoUtente_txtUsername.Text.Length > 20)
+            {
+                MessageBox.Show("Username troppo lungo! (max 20 caratteri)", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                tabNuovoUtente_txtUsername.Focus();
+                return false;
+            }
+
             // tipo utente deve essere selezionato
             if (tabNuovoUtente_cboTipo.SelectedItem == null)
             {
