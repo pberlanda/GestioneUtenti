@@ -36,6 +36,8 @@ namespace GestioneUtenti
             // imposta tipo studente
             tabNuovoUtente_cboTipo.SelectedIndex = 0;
 
+            tabNuovoUtente_lblTestCmd.Text = "il comando verrà vosualizzato quì";
+
             // **************
             // elimina utente
             // **************
@@ -82,7 +84,29 @@ namespace GestioneUtenti
         private void creaUtente()
         {
             // Specify the path to your batch file
-            string batchFilePath = @"D:\dev\GestioneUtenti\command.cmd";
+            string batchFilePath = @"E:\script\script";
+
+            // determina lo script da utilizzare e compone il comando
+            int selectedIndex = tabNuovoUtente_cboTipo.SelectedIndex;
+
+            switch (selectedIndex)
+            {
+                case 0:
+                    batchFilePath += "\\creaUserStudente.cmd " + tabNuovoUtente_txtNome.Text + " " + tabNuovoUtente_txtCognome.Text + " " + tabNuovoUtente_txtUsername.Text + " " + tabNuovoUtente_txtClasse.Text;
+                    break;
+                case 1:
+                    batchFilePath += "\\creaUserDocente.cmd " + tabNuovoUtente_txtNome.Text + " " + tabNuovoUtente_txtCognome.Text;
+                    break;
+                case 2:
+                    batchFilePath += "\\creaUserALS.cmd " + tabNuovoUtente_txtNome.Text + " " + tabNuovoUtente_txtCognome.Text;
+                    break;
+            }
+
+            // test command
+            tabNuovoUtente_lblTestCmd.Text = batchFilePath;
+
+            // se in modalità test, termina. Altrimenti prosegue con l'esecuzione del comando
+            if (tabNuovoUtente_ckTestMode.Checked == true) { return; }
 
             // Create a new process
             Process process = new Process();
@@ -94,7 +118,7 @@ namespace GestioneUtenti
             process.StartInfo.Arguments = $"/C \"{batchFilePath}\"";
 
             // Ensure that the process window is hidden
-            //process.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+            process.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
 
             // Start the process
             process.Start();
@@ -341,6 +365,26 @@ namespace GestioneUtenti
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabNuovoUtente_btnSelectScriptPath_Click(object sender, EventArgs e)
+        {
+
+            OpenFileDialog nuovoUtenteOpenFileDialog = new OpenFileDialog();
+
+            nuovoUtenteOpenFileDialog.InitialDirectory = "C:\\";
+            //nuovoUtenteOpenFileDialog.Filter = "*.cmd";
+            nuovoUtenteOpenFileDialog.FilterIndex = 0;
+            nuovoUtenteOpenFileDialog.RestoreDirectory = true;
+            nuovoUtenteOpenFileDialog.Title = "seleziona lo script di gestione utenti";
+            nuovoUtenteOpenFileDialog.Multiselect = false;
+            nuovoUtenteOpenFileDialog.ShowDialog();
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
         {
 
         }
