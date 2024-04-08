@@ -105,13 +105,13 @@ namespace GestioneUtenti
             switch (selectedIndex)
             {
                 case 0:
-                    batchFilePath += "\\creaUserStudente.cmd " + tabNuovoUtente_txtNome.Text + " " + tabNuovoUtente_txtCognome.Text + " " + tabNuovoUtente_txtUsername.Text + " " + tabNuovoUtente_txtClasse.Text;
+                    batchFilePath += @"\creaUserStudente.cmd " + tabNuovoUtente_txtNome.Text + " " + tabNuovoUtente_txtCognome.Text + " " + tabNuovoUtente_txtUsername.Text + " " + tabNuovoUtente_txtClasse.Text;
                     break;
                 case 1:
-                    batchFilePath += "\\creaUserDocente.cmd " + tabNuovoUtente_txtNome.Text + " " + tabNuovoUtente_txtCognome.Text;
+                    batchFilePath += @"\creaUserDocente.cmd " + tabNuovoUtente_txtNome.Text + " " + tabNuovoUtente_txtCognome.Text;
                     break;
                 case 2:
-                    batchFilePath += "\\creaUserALS.cmd " + tabNuovoUtente_txtNome.Text + " " + tabNuovoUtente_txtCognome.Text;
+                    batchFilePath += @"\creaUserALS.cmd " + tabNuovoUtente_txtNome.Text + " " + tabNuovoUtente_txtCognome.Text;
                     break;
             }
 
@@ -142,7 +142,26 @@ namespace GestioneUtenti
         private void eliminaUtente()
         {
             // Specify the path to your batch file
-            string batchFilePath = @"D:\dev\GestioneUtenti\command.cmd";
+            string batchFilePath = @"E:\script\script";
+
+            // compone lo script in base al tipo utente selezionato
+            int tipoUtente = TabElimina_cboTipo.SelectedIndex;
+
+            switch (tipoUtente)
+            {
+                case 0:
+                    batchFilePath += @"\eliminaStudente.cmd " + TabElimina_txtUsername.Text;
+                    break;
+
+                case 1:
+                    batchFilePath += @"\eliminaDocente.cmd " + TabElimina_txtUsername.Text;
+                    break;
+
+                case 2:
+                    batchFilePath += @"\eliminaALS.cmd " + TabElimina_txtUsername.Text;
+                    break;
+            }
+
 
             // Create a new process
             Process process = new Process();
@@ -189,7 +208,7 @@ namespace GestioneUtenti
                 return false;
             }
 
-            // usernmae non può essere più lungo di 20 caratteri
+            // usernmae non pu?essere pi?lungo di 20 caratteri
             if (tabNuovoUtente_txtUsername.Text.Length > 20)
             {
                 MessageBox.Show("Username troppo lungo! (max 20 caratteri)", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -238,6 +257,7 @@ namespace GestioneUtenti
                 TabElimina_cboTipo.Focus();
                 return false;
             }
+
             // arrivati qui significa che il controllo ¨¨ stato completato
             return true;
         }
