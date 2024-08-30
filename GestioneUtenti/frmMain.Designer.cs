@@ -45,6 +45,7 @@
             tabNuovoUtente_txtCognome = new TextBox();
             tabNuovoUtente_txtNome = new TextBox();
             tabNuovoUtente_lblNome = new Label();
+            menuStrip1 = new MenuStrip();
             tabPage2 = new TabPage();
             TabElimina_btnElimina = new Button();
             TabElimina_cboTipo = new ComboBox();
@@ -58,6 +59,12 @@
             tabCopiaTemi_lblTemaFine = new Label();
             tabCopiaTemi_lblTemaInizio = new Label();
             btnEsci = new Button();
+            menuStrip2 = new MenuStrip();
+            menuStrip3 = new MenuStrip();
+            menuStrip4 = new MenuStrip();
+            MainMenu = new ToolStripMenuItem();
+            posizioneScriptsToolStripMenuItem = new ToolStripMenuItem();
+            esciToolStripMenuItem = new ToolStripMenuItem();
             tabControl.SuspendLayout();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -72,10 +79,10 @@
             tabControl.Controls.Add(tabPage1);
             tabControl.Controls.Add(tabPage2);
             tabControl.Controls.Add(tabPage3);
-            tabControl.Location = new Point(1, 2);
+            tabControl.Location = new Point(1, 24);
             tabControl.Name = "tabControl";
             tabControl.SelectedIndex = 0;
-            tabControl.Size = new Size(645, 343);
+            tabControl.Size = new Size(645, 365);
             tabControl.TabIndex = 0;
             // 
             // tabPage1
@@ -95,10 +102,11 @@
             tabPage1.Controls.Add(tabNuovoUtente_txtCognome);
             tabPage1.Controls.Add(tabNuovoUtente_txtNome);
             tabPage1.Controls.Add(tabNuovoUtente_lblNome);
+            tabPage1.Controls.Add(menuStrip1);
             tabPage1.Location = new Point(4, 24);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(637, 315);
+            tabPage1.Size = new Size(637, 337);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "tabPage1";
             tabPage1.UseVisualStyleBackColor = true;
@@ -116,9 +124,12 @@
             // tabNuovoUtente_lblTestCmd
             // 
             tabNuovoUtente_lblTestCmd.AutoSize = true;
+            tabNuovoUtente_lblTestCmd.BackColor = Color.Black;
+            tabNuovoUtente_lblTestCmd.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            tabNuovoUtente_lblTestCmd.ForeColor = SystemColors.Control;
             tabNuovoUtente_lblTestCmd.Location = new Point(142, 283);
             tabNuovoUtente_lblTestCmd.Name = "tabNuovoUtente_lblTestCmd";
-            tabNuovoUtente_lblTestCmd.Size = new Size(38, 15);
+            tabNuovoUtente_lblTestCmd.Size = new Size(43, 17);
             tabNuovoUtente_lblTestCmd.TabIndex = 10;
             tabNuovoUtente_lblTestCmd.Text = "label1";
             tabNuovoUtente_lblTestCmd.Click += label1_Click_1;
@@ -197,7 +208,7 @@
             tabNuovoUtente_cboTipo.FormattingEnabled = true;
             tabNuovoUtente_cboTipo.Location = new Point(142, 125);
             tabNuovoUtente_cboTipo.Name = "tabNuovoUtente_cboTipo";
-            tabNuovoUtente_cboTipo.Size = new Size(280, 23);
+            tabNuovoUtente_cboTipo.Size = new Size(200, 23);
             tabNuovoUtente_cboTipo.TabIndex = 5;
             tabNuovoUtente_cboTipo.SelectedIndexChanged += tabNuovoUtente_cboTipo_SelectedIndexChanged;
             // 
@@ -245,6 +256,14 @@
             tabNuovoUtente_lblNome.TabIndex = 0;
             tabNuovoUtente_lblNome.Text = "Nome";
             // 
+            // menuStrip1
+            // 
+            menuStrip1.Location = new Point(3, 3);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(631, 24);
+            menuStrip1.TabIndex = 12;
+            menuStrip1.Text = "menuStrip1";
+            // 
             // tabPage2
             // 
             tabPage2.Controls.Add(TabElimina_btnElimina);
@@ -255,7 +274,7 @@
             tabPage2.Location = new Point(4, 24);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(637, 279);
+            tabPage2.Size = new Size(637, 337);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "tabPage2";
             tabPage2.UseVisualStyleBackColor = true;
@@ -276,7 +295,7 @@
             TabElimina_cboTipo.FormattingEnabled = true;
             TabElimina_cboTipo.Location = new Point(133, 66);
             TabElimina_cboTipo.Name = "TabElimina_cboTipo";
-            TabElimina_cboTipo.Size = new Size(280, 23);
+            TabElimina_cboTipo.Size = new Size(179, 23);
             TabElimina_cboTipo.TabIndex = 9;
             TabElimina_cboTipo.SelectedIndexChanged += TabElimina_cboTipo_SelectedIndexChanged;
             // 
@@ -317,17 +336,17 @@
             tabPage3.Location = new Point(4, 24);
             tabPage3.Name = "tabPage3";
             tabPage3.Padding = new Padding(3);
-            tabPage3.Size = new Size(637, 279);
+            tabPage3.Size = new Size(637, 337);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "tabPage3";
             tabPage3.UseVisualStyleBackColor = true;
             // 
             // tabCopiaTemi_txtTemaFine
             // 
-            tabCopiaTemi_txtTemaFine.Location = new Point(124, 57);
+            tabCopiaTemi_txtTemaFine.Location = new Point(122, 58);
             tabCopiaTemi_txtTemaFine.Margin = new Padding(2, 1, 2, 1);
             tabCopiaTemi_txtTemaFine.Name = "tabCopiaTemi_txtTemaFine";
-            tabCopiaTemi_txtTemaFine.Size = new Size(61, 23);
+            tabCopiaTemi_txtTemaFine.Size = new Size(55, 23);
             tabCopiaTemi_txtTemaFine.TabIndex = 12;
             // 
             // tabCopiaTemi_txtTemaInizio
@@ -335,7 +354,7 @@
             tabCopiaTemi_txtTemaInizio.Location = new Point(122, 33);
             tabCopiaTemi_txtTemaInizio.Margin = new Padding(2, 1, 2, 1);
             tabCopiaTemi_txtTemaInizio.Name = "tabCopiaTemi_txtTemaInizio";
-            tabCopiaTemi_txtTemaInizio.Size = new Size(63, 23);
+            tabCopiaTemi_txtTemaInizio.Size = new Size(55, 23);
             tabCopiaTemi_txtTemaInizio.TabIndex = 11;
             // 
             // tabCopiaTemi_btnEseguiCopia
@@ -343,7 +362,7 @@
             tabCopiaTemi_btnEseguiCopia.Location = new Point(122, 91);
             tabCopiaTemi_btnEseguiCopia.Margin = new Padding(2, 1, 2, 1);
             tabCopiaTemi_btnEseguiCopia.Name = "tabCopiaTemi_btnEseguiCopia";
-            tabCopiaTemi_btnEseguiCopia.Size = new Size(105, 21);
+            tabCopiaTemi_btnEseguiCopia.Size = new Size(105, 27);
             tabCopiaTemi_btnEseguiCopia.TabIndex = 13;
             tabCopiaTemi_btnEseguiCopia.Text = "Esegui copia";
             tabCopiaTemi_btnEseguiCopia.UseVisualStyleBackColor = true;
@@ -352,7 +371,7 @@
             // tabCopiaTemi_lblTemaFine
             // 
             tabCopiaTemi_lblTemaFine.AutoSize = true;
-            tabCopiaTemi_lblTemaFine.Location = new Point(34, 58);
+            tabCopiaTemi_lblTemaFine.Location = new Point(34, 60);
             tabCopiaTemi_lblTemaFine.Margin = new Padding(2, 0, 2, 0);
             tabCopiaTemi_lblTemaFine.Name = "tabCopiaTemi_lblTemaFine";
             tabCopiaTemi_lblTemaFine.Size = new Size(60, 15);
@@ -362,7 +381,7 @@
             // tabCopiaTemi_lblTemaInizio
             // 
             tabCopiaTemi_lblTemaInizio.AutoSize = true;
-            tabCopiaTemi_lblTemaInizio.Location = new Point(34, 33);
+            tabCopiaTemi_lblTemaInizio.Location = new Point(34, 35);
             tabCopiaTemi_lblTemaInizio.Margin = new Padding(2, 0, 2, 0);
             tabCopiaTemi_lblTemaInizio.Name = "tabCopiaTemi_lblTemaInizio";
             tabCopiaTemi_lblTemaInizio.Size = new Size(66, 15);
@@ -372,7 +391,7 @@
             // 
             // btnEsci
             // 
-            btnEsci.Location = new Point(560, 351);
+            btnEsci.Location = new Point(560, 395);
             btnEsci.Name = "btnEsci";
             btnEsci.Size = new Size(75, 23);
             btnEsci.TabIndex = 14;
@@ -380,13 +399,53 @@
             btnEsci.UseVisualStyleBackColor = true;
             btnEsci.Click += btnEsci_Click;
             // 
+            // menuStrip2
+            // 
+            menuStrip2.Location = new Point(0, 48);
+            menuStrip2.Name = "menuStrip2";
+            menuStrip2.Size = new Size(647, 24);
+            menuStrip2.TabIndex = 15;
+            // 
+            // menuStrip3
+            // 
+            menuStrip3.Location = new Point(0, 24);
+            menuStrip3.Name = "menuStrip3";
+            menuStrip3.Size = new Size(647, 24);
+            menuStrip3.TabIndex = 16;
+            // 
+            // menuStrip4
+            // 
+            menuStrip4.Location = new Point(0, 0);
+            menuStrip4.Name = "menuStrip4";
+            menuStrip4.Size = new Size(647, 24);
+            menuStrip4.TabIndex = 17;
+            // 
+            // MainMenu
+            // 
+            MainMenu.Name = "MainMenu";
+            MainMenu.Size = new Size(32, 19);
+            // 
+            // posizioneScriptsToolStripMenuItem
+            // 
+            posizioneScriptsToolStripMenuItem.Name = "posizioneScriptsToolStripMenuItem";
+            posizioneScriptsToolStripMenuItem.Size = new Size(32, 19);
+            // 
+            // esciToolStripMenuItem
+            // 
+            esciToolStripMenuItem.Name = "esciToolStripMenuItem";
+            esciToolStripMenuItem.Size = new Size(32, 19);
+            // 
             // frmGestioneUtenti
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(647, 386);
+            ClientSize = new Size(647, 430);
             Controls.Add(btnEsci);
             Controls.Add(tabControl);
+            Controls.Add(menuStrip2);
+            Controls.Add(menuStrip3);
+            Controls.Add(menuStrip4);
+            MainMenuStrip = menuStrip1;
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "frmGestioneUtenti";
@@ -403,6 +462,7 @@
             ((System.ComponentModel.ISupportInitialize)tabCopiaTemi_txtTemaFine).EndInit();
             ((System.ComponentModel.ISupportInitialize)tabCopiaTemi_txtTemaInizio).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -437,6 +497,13 @@
         private PictureBox pictureBox1;
         private Label tabNuovoUtente_lblTestCmd;
         private CheckBox tabNuovoUtente_ckTestMode;
+        private MenuStrip menuStrip1;
+        private MenuStrip menuStrip2;
+        private MenuStrip menuStrip3;
+        private MenuStrip menuStrip4;
+        private ToolStripMenuItem MainMenu;
+        private ToolStripMenuItem posizioneScriptsToolStripMenuItem;
+        private ToolStripMenuItem esciToolStripMenuItem;
         //private OpenFileDialog openFileDialog1;
         //private OpenFileDialog openFileDialog2;
     }

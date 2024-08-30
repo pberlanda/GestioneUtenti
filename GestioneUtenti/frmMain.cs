@@ -337,6 +337,7 @@ namespace GestioneUtenti
             cognome = cognome.ToLower();
 
             username = nome + "." + cognome;
+            username = username.Replace(" ", "");
 
             tabNuovoUtente_txtUsername.Text = username;
         }
